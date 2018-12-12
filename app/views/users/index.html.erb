@@ -1,0 +1,18 @@
+<% @user.each do |user|%>
+  <% if !current_user %>
+      <p>
+        <i class="fa fa-user-circle-o "></i>
+        <%= user.email%>
+        <%= link_to "Add Friend"%>
+      </p>
+
+  <% else %>      
+	<% if user.email !=current_user.email%>
+		<p>
+      <i class="fa fa-user-circle-o "></i>
+			<%= user.email%>
+			<%= link_to "Add Friend" %>	
+		</p>
+	<% end %>
+  <% end %>
+<% end %>

@@ -1,0 +1,6 @@
+$('#comment-<%= @comment.id %>').remove();
+noty({
+	text: 'Comment destroyed!!',
+	type: 'information',
+	timeout: 2000
+});
